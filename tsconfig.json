@@ -8,6 +8,6 @@
         "sourceMap": true
     },
     "files": [
-        "src/app/index.ts"        
+        "src/client/app/index.ts"
     ]
 }

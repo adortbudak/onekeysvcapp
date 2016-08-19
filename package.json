@@ -4,7 +4,6 @@
   "dependencies": {
     "angular2": "^2.0.0-beta.17",
     "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.7",
     "es6-shim": "^0.35.1",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.6",
@@ -16,7 +15,8 @@
   "scripts": {
     "init": "npm install",
     "install": "bower install",
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "watch": "webpack --watch --progress --profile --colors --display-error-details --display-cached"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
+    "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
     "webpack": "^1.13.2",
     "yargs": "^5.0.0"

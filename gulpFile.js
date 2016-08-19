@@ -6,6 +6,7 @@ var args = require('yargs').argv;
 var $ = require('gulp-load-plugins')({lazy: true});
 var config = require('./gulp.config')();
 
+// tasks
 gulp.task('vet',function () {
     log('Analyzing source with JSHint and JSCS');
     return gulp.src(config.alljs)
@@ -17,6 +18,7 @@ gulp.task('vet',function () {
 });
 
 
+// local functions
 function log(msg){
     if(typeof(msg) === 'object'){
         for(var item in msg){
