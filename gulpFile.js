@@ -17,7 +17,6 @@ gulp.task('vet',function () {
 });
 
 
-
 function log(msg){
     if(typeof(msg) === 'object'){
         for(var item in msg){

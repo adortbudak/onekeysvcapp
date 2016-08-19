@@ -1,6 +1,9 @@
 /**
  * Created by adortbud on 8/19/2016.
  */
+
+/*jshint esversion: 6 */
+
 const electron = require('electron');
 const app = electron.app;
 
