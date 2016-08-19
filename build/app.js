@@ -14,58 +14,13 @@ webpackJsonp([1,2],[
 	};
 	var browser_1 = __webpack_require__(394);
 	var core_1 = __webpack_require__(279);
-	var ByteFormatPipe = (function () {
-	    function ByteFormatPipe() {
-	    }
-	    ByteFormatPipe.prototype.transform = function (bytes, args) {
-	        if (bytes === 0)
-	            return 'O Bytes';
-	        var k = 1000;
-	        var sizes = ['Bytes', 'KB', 'MB', 'GB'];
-	        var i = Math.floor(Math.log(bytes) / Math.log(k));
-	        return (bytes / Math.pow(k, i)).toFixed(1) + ' ' + sizes[i];
-	    };
-	    ByteFormatPipe = __decorate([
-	        core_1.Pipe({ name: 'byteFormat' }), 
-	        __metadata('design:paramtypes', [])
-	    ], ByteFormatPipe);
-	    return ByteFormatPipe;
-	}());
 	var App = (function () {
 	    function App() {
-	        this.images = [];
 	    }
-	    App.prototype.handleDrop = function (e) {
-	        var files = e.dataTransfer.files;
-	        var self = this;
-	        Object.keys(files).forEach(function (key) {
-	            if (files[key].type === "image/png" || files[key].type === "image/jpeg") {
-	                self.images.push(files[key]);
-	            }
-	            else {
-	                alert("File must be a PNG or JPEG");
-	            }
-	        });
-	        return false;
-	    };
-	    App.prototype.imageStats = function () {
-	        var sizes = [];
-	        var totalSize = 0;
-	        this
-	            .images
-	            .forEach(function (image) { return sizes.push(image.size); });
-	        sizes
-	            .forEach(function (size) { return totalSize += size; });
-	        return {
-	            size: totalSize,
-	            count: this.images.length
-	        };
-	    };
 	    App = __decorate([
 	        core_1.Component({
 	            selector: 'app',
-	            pipes: [ByteFormatPipe],
-	            template: "\n        <h1>Total Images: {{imageStats().count}}</h1>\n        <h1>Total Size: {{imageStats().size | byteFormat}} bytes</h1>\n        <div\n            (dragover)=\"false\" \n            (dragend)=\"false\" \n            (drop)=\"handleDrop($event)\" \n            style=\"height: 300px;border: 5px dotted #ccc;\">\n            <p>\n            <strong>Drop Your Images  Here</strong>\n            </p>\n        </div>\n        <div class=\"media\" *ngFor=\"#image of images\">\n            <div class=\"media-left\">\n                <a href=\"#\">\n                    <img class=\"media-object\" src=\"{{ image.path }}\" style=\"max-width:200px\">\n                </a>\n            </div>\n            <div class=\"media-body\">\n                <h4 class=\"media-heading\">{{ image.name }}</h4>\n                <p>{{ image.size }} bytes</p>\n            </div>\n        </div>\n    "
+	            template: "        \n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-lg-2\">\n                    Left Column\n                </div>\n                <div class=\"col-lg-10\">\n                    Righ Column\n                </div>\n            </div>\n        </div>\n    "
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], App);

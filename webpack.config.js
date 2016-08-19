@@ -3,7 +3,6 @@
  */
 var webpack = require('webpack');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
-var path = require('path');
 
 module.exports = {
 
