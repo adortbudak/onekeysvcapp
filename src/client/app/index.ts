@@ -8,18 +8,7 @@ import {Component}  from 'angular2/core';
 
 @Component({
     selector: 'app',
-    template: `        
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    Left Column
-                </div>
-                <div class="col-lg-10">
-                    Righ Column
-                </div>
-            </div>
-        </div>
-    `
+    templateUrl: './main.html'
 })
 
 export class App{
